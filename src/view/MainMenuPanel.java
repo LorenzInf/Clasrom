@@ -4,9 +4,6 @@ import controller.ProgramController;
 import controller.ViewController;
 
 import javax.swing.*;
-import javax.swing.border.LineBorder;
-import java.awt.*;
-import java.util.Arrays;
 
 public class MainMenuPanel {
     private final ProgramController pc;
@@ -14,7 +11,6 @@ public class MainMenuPanel {
     private JButton logOutButton;
     private JLabel loggedInAsLabel;
     private JPanel scrollPanel;
-    private JPanel iPanel;
 
     public MainMenuPanel(ViewController vc, ProgramController pc) {
         this.pc = pc;

@@ -3,9 +3,6 @@ package controller;
 import land.DatabaseController;
 import model.Schueler;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class ProgramController {
 
     private final controller.ViewController vc;

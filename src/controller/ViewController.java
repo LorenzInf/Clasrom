@@ -2,7 +2,6 @@ package controller;
 
 import com.formdev.flatlaf.FlatLightLaf;
 import view.*;
-import view.TopicDetailsPanel;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
@@ -15,7 +14,7 @@ public class ViewController {
     private final LoadingPanel loading;
     private LoginPanel login;
     private SignUpPanel signUp;
-    private MainMenuPanel mainMenu;
+    private final MainMenuPanel mainMenu;
 
     public ViewController (ProgramController pc) {
         FlatLightLaf.setup();
@@ -122,17 +121,15 @@ public class ViewController {
             String[] tmp = {data[0], data[1]};
             result.add(tmp);
         }
-
         return result.toArray(new String[0][0]);
     }
 
     public void abgeschlossen(String subtopic, int value){
         pc.getDbc().executeStatement("""
                 UPDATE FLAN_Abgeschlossen
-                SET FLAN_Abgeschlossen.abgeschlossen = """ + value + """
-                WHERE SID = """ + pc.getSchueler().getSid() + """
-                AND TID = """ + subtopic + """
-                """);
+                SET FLAN_Abgeschlossen.abgeschlossen =""" + value + """
+                WHERE SID =""" + pc.getSchueler().getSid() + """
+                AND TID =""" + subtopic);
     }
 
     public JFrame getFrame() {
