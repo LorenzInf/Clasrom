@@ -109,7 +109,7 @@ public class ViewController {
         List<String[]> result = new ArrayList<>();
 
         pc.getDbc().executeStatement("""
-                SELECT FLAN_Unterthemen.Name AS UnterName, Informationen
+                SELECT FLAN_Unterthemen.UID AS UnterName, Informationen
                 FROM FLAN_Unterthemen
                 JOIN FLAN_Themen
                 ON FLAN_Unterthemen.TID = FLAN_Themen.TID
