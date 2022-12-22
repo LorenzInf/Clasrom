@@ -22,10 +22,8 @@ public class SubtopicDetailsPanel {
         abgeschlossenCheckBox.addActionListener(e -> {
             if(abgeschlossenCheckBox.isSelected()) {
                 vc.abgeschlossen(subtopicLabel.getText(),1);
-                System.out.println("Hallo");
             } else {
                 vc.abgeschlossen(subtopicLabel.getText(), 0);
-                System.out.println("NEIN");
             }
 
         });
